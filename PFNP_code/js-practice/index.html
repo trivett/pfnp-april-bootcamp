@@ -1,0 +1,203 @@
+<html lang="en">
+
+<head>
+  <title>JavaScript practicing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
+  <style>
+    .ui.card {
+      width: 100%;
+    }
+
+    code {
+      display: block;
+      margin-top: 6px
+    }
+
+    i,
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #efefef;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='ui container'>
+    <div class="ui grid">
+      <div class="two wide column"></div>
+      <div class="twelve wide column">
+        <div class='ui text container'>
+          <h1 class='ui dividing header'>JavaScript practice</h1>
+        </div>
+        <p>
+          Before we can do complex stuff with JavaScript, we have to pay our dues and learn some basics. It will be a little boring
+          at times just working with text in the console, but soon, you will be making totally interactive web pages. Wax
+          on, wax off, and soon you will be kicking butt.
+        </p>
+        <p>
+          Change the value in the
+          <i>&lt;script&gt</i>; tag at the bottom to match the js file that you are editing. Refresh the page to re-load your
+          code. Open the Chrome Dev Tools Console (Mac: cmd+shift+j, Windows: ctrl+shift+j) to see your console output.
+        </p>
+
+        <h2>Cheat sheet</h2>
+
+        <div class="ui raised card">
+          <div class="content">
+            <div class="header">Comments</div>
+            <code>
+              // this is a comment. it will not do anything, just a note for yourself
+            </code>
+            <code>
+              /** this is also a comment: don't forget to close it! */
+            </code>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="ui raised card">
+          <div class="content">
+            <div class="header">Logging to the console</div>
+            <code>console.log(stuff)</code> merely prints whatever 'stuff' is to the JavaScript console.
+          </div>
+        </div>
+        <!-- card -->
+        <div class="ui raised card">
+          <div class="content">
+            <div class="header">Declarations</div>
+            Constants that can never change:
+            <code>const pi = 3.14;</code> Variables can change. New style:
+            <code>let myAge = 33;</code> Old style:
+            <code>var myAge = 33;</code> Any name in JavaScript should follow lowerCamelCase, like eBay or iPhone. Each word after the first is capital, no spaces. Numbers are okay but not at the first character.
+          </div>
+        </div>
+        <!-- card -->
+        <div class="ui raised card">
+          <div class="content">
+            <div class="header">Operators</div>
+            Plus, minus, divide, multiply:
+            <code>+ - / *</code> 
+            Equal to,
+            <code>==</code> 
+            Equal to and of the same type (use this one):
+            <code>===</code> 
+            Inequality
+            <code>!=</code> 
+            Strict Inequality (use this one)
+            <code>!==</code> 
+            Less than, greater than, less than or equal, greater than or equal:
+            <code>< > <= >=</code>
+            Or:
+            <code>||</code>
+            And:
+            <code>&&</code>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="ui raised card">
+          <div class="content">
+            <div class="header">Data Types</div>
+            Strings are in single or double quotes:
+            <code>let name = "Vincent";</code>
+            Numbers are not in quotes, you can do math with them.
+            <code>let myAge = 33;</code>
+            <code>let myAgeLaterThisYear = myAge + 1;</code>
+            Boolean is just true or false:
+            <code>
+              const areBikesRad = true;
+            </code>
+            <code>
+              const myAge = 19;
+              <br />
+              const canVote = myAge >= 18;
+            </code>
+            Arrays are lists of things of any type
+            <code>
+              let myFriends = ['Ben', 'Phillip', 'Paola'];
+            </code>
+            Objects are key-value like structures like a dictionary:
+            <pre>
+              <code>
+let hotSauce = {
+  name: 'Peri peri',
+  origin: 'South Africa',
+  color: 'Orange',
+  numBottles: 3
+  ingredients: [
+    'garlic',
+    'salt',
+    'basil',
+    "bird's eye peppers",
+    'vinegar',
+    'cilantro',
+    'olive oil',
+    'paprika',
+    'lemon'
+    ]
+};
+              </code>
+            </pre>
+          </div>
+        </div>
+        <div class="ui raised card">
+            <div class="content">
+              <div class="header">Control flow</div>
+              In an if/else statement, the first block with a true condition will run 
+              <pre>
+                <code>
+if (someCondition) {
+  // do stuff if someCondition is true
+} else if (someOtherCondition){
+  // do stuff if someOtherCondition is true
+} else {
+  // if both above are false, this will run
+}
+                </code>
+              </pre>
+            </div>
+          </div>
+          <!-- card -->
+
+        <!-- card -->
+        <div class="ui raised card">
+          <div class="content">
+            <div class="header">Functions</div>
+            A few ways to declare:
+            <pre>
+              <code>
+function doSomeThings(){
+  console.log('I am in a function.');
+}
+            </code>
+          </pre> With a parameter
+            <pre>
+              <code>
+function isVincentsEmail(email){
+  return email === 'trivett@gmail.com';
+}
+            </code>
+          </pre>
+          A return value is the output that can be saved or passed to another function or whatever you want.
+            <div class="header">Invocation</div>
+            After you declare a function, you must invoke it otherwise nothing happens.
+            <pre>
+              <code>
+doSomeThings();
+
+const checkWrongEmail = isVincentsEmail('trivett@hotmail.com'); // false
+const checkRightEmail = isVincentsEmail('trivett@gmail.com'); // true
+              </code>
+            </pre>
+
+          </div>
+        </div>
+        <!-- card -->
+      </div>
+    </div>
+  </div>
+  <!-- VVVVVV Change me!!!! VVVVVVVVVVV -->
+  <script src='declarations.js'></script>
+  <!-- ^^^^^^ Change me!!!! ^^^^^^^^^^^ -->
+</body>
+
+</html>

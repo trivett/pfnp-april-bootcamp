@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEMANTIC UI CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>What is your star wars name? </title>
+</head>
+
+<body>
+  <div class="ui grid">
+    <div class="four wide column"></div>
+    <div class="eight wide column">
+      <h1>What is your Star Wars Name??</h1>
+
+      <form id="sw-name-inputs" onsubmit="return false;" class='ui form'>
+        <div class="field">
+          <input type="text" id="first-name" placeholder="First Name" class="prompt">
+        </div>
+        <div class="field">
+          <input type="text" id="last-name" placeholder="Last Name" class="prompt">
+        </div>
+        <div class="field">
+          <input type="text" id="street" placeholder="Street" class="prompt">
+        </div>
+        <div class="field">
+          <input type="text" id="city" placeholder="City" class="prompt">
+        </div>
+        <button class= 'ui button' type="submit">See your star wars name</button>
+      </form>
+
+      <h2>Your Star Wars Name:</h2>
+
+      <h3 id="answer"></h3>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
